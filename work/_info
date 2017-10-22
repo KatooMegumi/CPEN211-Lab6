@@ -1,0 +1,314 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Jack/Documents/University/2017-2018/Term 1/CPEN 211/lab5
+vAdder1
+Z0 !s110 1508714049
+!i10b 1
+!s100 RDG2RXji0238ggcBMmc341
+I[F4W9`An_dVEP<6eYEWYJ0
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+Z2 dC:/Users/Jack/Documents/University/2017-2018/Term 1/CPEN 211/lab6
+Z3 w1508709215
+Z4 8C:/Users/Jack/Documents/University/2017-2018/Term 1/CPEN 211/lab6/alu.v
+Z5 FC:/Users/Jack/Documents/University/2017-2018/Term 1/CPEN 211/lab6/alu.v
+L0 47
+Z6 OV;L;10.3d;59
+r1
+!s85 0
+31
+Z7 !s108 1508714049.741000
+Z8 !s107 C:/Users/Jack/Documents/University/2017-2018/Term 1/CPEN 211/lab6/alu.v|
+Z9 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jack/Documents/University/2017-2018/Term 1/CPEN 211/lab6/alu.v|
+!i113 1
+Z10 o-work work
+n@adder1
+vAddsub
+R0
+!i10b 1
+!s100 M?L7<AV54FHBnVb4aSAd[2
+IoD^G@6U9BEmP3KTRI<`li1
+R1
+R2
+R3
+R4
+R5
+L0 31
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+n@addsub
+valu
+R0
+!i10b 1
+!s100 F9<:1f72>1d_PcRQfZ12R1
+I`Gg_@SY2fjUYScl9XS0[g3
+R1
+R2
+R3
+R4
+R5
+L0 6
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vcpu
+!s110 1508710379
+!i10b 1
+!s100 N@WPN1?dcQf7mfXVKR2T@0
+I06GU8VH<=HQCC9NjLK2K22
+R1
+R2
+w1508710377
+8C:/Users/Jack/Documents/University/2017-2018/Term 1/CPEN 211/lab6/cpu.v
+FC:/Users/Jack/Documents/University/2017-2018/Term 1/CPEN 211/lab6/cpu.v
+L0 1
+R6
+r1
+!s85 0
+31
+!s108 1508710379.971000
+!s107 C:/Users/Jack/Documents/University/2017-2018/Term 1/CPEN 211/lab6/cpu.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jack/Documents/University/2017-2018/Term 1/CPEN 211/lab6/cpu.v|
+!i113 1
+R10
+vdatapath
+R0
+!i10b 1
+!s100 NTcEI7VXm<J=?E0:7SK>]3
+I4bDIL]imUENWHbBdAM`cS1
+R1
+R2
+Z11 w1508714046
+Z12 8C:/Users/Jack/Documents/University/2017-2018/Term 1/CPEN 211/lab6/datapath.v
+Z13 FC:/Users/Jack/Documents/University/2017-2018/Term 1/CPEN 211/lab6/datapath.v
+L0 1
+R6
+r1
+!s85 0
+31
+Z14 !s108 1508714049.840000
+Z15 !s107 C:/Users/Jack/Documents/University/2017-2018/Term 1/CPEN 211/lab6/datapath.v|
+Z16 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jack/Documents/University/2017-2018/Term 1/CPEN 211/lab6/datapath.v|
+!i113 1
+R10
+vdec
+R0
+!i10b 1
+!s100 Akc?44fH`Qi1:M@3b7h4]2
+IU[lcJ?jzn=XPg@F>n;BAb2
+R1
+R2
+Z17 w1507694960
+Z18 8C:/Users/Jack/Documents/University/2017-2018/Term 1/CPEN 211/lab6/regfile.v
+Z19 FC:/Users/Jack/Documents/University/2017-2018/Term 1/CPEN 211/lab6/regfile.v
+L0 34
+R6
+r1
+!s85 0
+31
+Z20 !s108 1508714049.933000
+Z21 !s107 C:/Users/Jack/Documents/University/2017-2018/Term 1/CPEN 211/lab6/regfile.v|
+Z22 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jack/Documents/University/2017-2018/Term 1/CPEN 211/lab6/regfile.v|
+!i113 1
+R10
+vinput_iface
+R0
+!i10b 1
+!s100 8SgM@8TG_;?zeKCKSLm2H1
+I=_DA>nXeY@GnU[>V;V1]E1
+R1
+R2
+Z23 w1508711809
+Z24 8C:/Users/Jack/Documents/University/2017-2018/Term 1/CPEN 211/lab6/lab6_top.v
+Z25 FC:/Users/Jack/Documents/University/2017-2018/Term 1/CPEN 211/lab6/lab6_top.v
+L0 76
+R6
+r1
+!s85 0
+31
+Z26 !s108 1508714049.513000
+Z27 !s107 C:/Users/Jack/Documents/University/2017-2018/Term 1/CPEN 211/lab6/lab6_top.v|
+Z28 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jack/Documents/University/2017-2018/Term 1/CPEN 211/lab6/lab6_top.v|
+!i113 1
+R10
+vlab6_top
+R0
+!i10b 1
+!s100 6`1F>SmZ`NQ>?FGgGnkdL1
+I`GOX6h77LlJT_<PY<cY_Q2
+R1
+R2
+R23
+R24
+R25
+L0 40
+R6
+r1
+!s85 0
+31
+R26
+R27
+R28
+!i113 1
+R10
+vmux4
+R0
+!i10b 1
+!s100 TWJB_FUMn];KWn;:`>a=c1
+IDliZD9]=89]hV7ilFAgb82
+R1
+R2
+R11
+R12
+R13
+L0 54
+R6
+r1
+!s85 0
+31
+R14
+R15
+R16
+!i113 1
+R10
+vmux8
+R0
+!i10b 1
+!s100 99aBMV01:S?m`hE>^Zm6@3
+IFMABk4fOB>mZnK5EmDeZA0
+R1
+R2
+R17
+R18
+R19
+L0 57
+R6
+r1
+!s85 0
+31
+R20
+R21
+R22
+!i113 1
+R10
+vregfile
+R0
+!i10b 1
+!s100 Dm;5c3f6[[1c5?A2^3bh73
+IM2ZFmKUWI1O2S783o0jaV3
+R1
+R2
+R17
+R18
+R19
+L0 5
+R6
+r1
+!s85 0
+31
+R20
+R21
+R22
+!i113 1
+R10
+vshifter
+R0
+!i10b 1
+!s100 2]oH];^HbjB3<0hI?<UDA3
+IoD8`V]c9TAndlzD6SC0[70
+R1
+R2
+w1507605489
+8C:/Users/Jack/Documents/University/2017-2018/Term 1/CPEN 211/lab6/shifter.v
+FC:/Users/Jack/Documents/University/2017-2018/Term 1/CPEN 211/lab6/shifter.v
+L0 2
+R6
+r1
+!s85 0
+31
+!s108 1508714049.620000
+!s107 C:/Users/Jack/Documents/University/2017-2018/Term 1/CPEN 211/lab6/shifter.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Jack/Documents/University/2017-2018/Term 1/CPEN 211/lab6/shifter.v|
+!i113 1
+R10
+vsseg
+R0
+!i10b 1
+!s100 2coa=z@69=256>R[762U20
+IooWf8f[A]LCFB3SNX>kdf1
+R1
+R2
+R23
+R24
+R25
+L0 104
+R6
+r1
+!s85 0
+31
+R26
+R27
+R28
+!i113 1
+R10
+vvDFF
+R0
+!i10b 1
+!s100 VhMlA[45LcS1YFUTFg;<I2
+I<5j5H5]OIAO`fbJ0_TE8I1
+R1
+R2
+R23
+R24
+R25
+L0 87
+R6
+r1
+!s85 0
+31
+R26
+R27
+R28
+!i113 1
+R10
+nv@d@f@f
+vvDFFE
+R0
+!i10b 1
+!s100 S^2KC5AiCI;EZ=k21ah;h2
+Iz:TF>z6WS`z>KV<j`NXia1
+R1
+R2
+R17
+R18
+R19
+L0 44
+R6
+r1
+!s85 0
+31
+R20
+R21
+R22
+!i113 1
+R10
+nv@d@f@f@e

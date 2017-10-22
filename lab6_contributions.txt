@@ -1,0 +1,12 @@
+Contributions for Lab 6: 
+
+Lab 5 - Jack Hou: 
+datapath.v
+alu.v
+shifter.v
+regfile.v
+lab5_top.v <- got the Hex values 
+
+Lab 6 - Jack Hou:
+lab6_top.v
+cpu.v
