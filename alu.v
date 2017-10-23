@@ -7,11 +7,12 @@ module alu(ALUop,Ain,Bin,out,status_in);
   input [1:0] ALUop; 
   input [15:0] Ain, Bin;
   output reg [15:0] out;
-  output reg [2:0] status_in;
+  output [2:0] status_in;
   wire ovf;
   wire [15:0] sout;
 
   Addsub(Ain, Bin, 1'b1, sout, ovf);
+  assign status_in = {{out == 16'b0 ? 1'b1:1'b0},ovf,out[15]};
   //ALU will reevaluate whenever any of the inputs change 
   always @(*) begin
     case (ALUop)
@@ -21,9 +22,6 @@ module alu(ALUop,Ain,Bin,out,status_in);
       `NOT: out = ~Bin;
       default: out = 16'bx;
     endcase	
-    if( ALUop == `CMP ) begin //So status_in only sets if ALUop is CMP
-	status_in <= {{out == 16'b0 ? 1'b1:1'b0},ovf,out[15]};
-    end
 end
 endmodule
 
