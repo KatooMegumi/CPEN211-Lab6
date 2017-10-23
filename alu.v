@@ -11,7 +11,7 @@ module alu(ALUop,Ain,Bin,out,status_in);
   wire ovf;
   wire [15:0] sout;
 
-  Addsub(Ain, Bin, 1'b1, sout, ovf);
+  Addsub #(16) a(Ain, Bin, 1'b1, sout, ovf);
   assign status_in = {{out == 16'b0 ? 1'b1:1'b0},ovf,out[15]};
   //ALU will reevaluate whenever any of the inputs change 
   always @(*) begin
@@ -22,7 +22,7 @@ module alu(ALUop,Ain,Bin,out,status_in);
       `NOT: out = ~Bin;
       default: out = 16'bx;
     endcase	
-end
+  end
 endmodule
 
 //Taken from SS.6 
@@ -33,7 +33,8 @@ module Addsub(a,b,sub,s,ovf);
   output [n-1:0] s;
   output ovf;  //ovf is 1 if overflow 
   wire c1, c2;
-  wire ovf = c1 ^ c2; //overflow if signs don't match 
+
+  assign ovf = c1 ^ c2; //overflow if signs don't match 
 
   //add non sign bits
   Adder1 #(n-1) ai(a[n-2:0],b[n-2:0]^{n-1{sub}},sub,c1,s[n-2:0]);
@@ -48,8 +49,6 @@ module Adder1(a,b,cin,cout,s);
   input cin ;
   output [n-1:0] s;
   output cout;
-  wire [n-1:0] s;
-  wire cout;
 
   assign {cout, s} = a + b + cin;
 endmodule

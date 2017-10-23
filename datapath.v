@@ -1,6 +1,6 @@
 module datapath(clk, readnum, vsel, loada, loadb, shift, asel, bsel,
 		ALUop, loadc, loads, writenum, write, mdata, 
-		status, C, mdata, sximm8, PC, sximm5);
+		status, C, sximm8, PC, sximm5);
 
   input clk, loada, loadb, loadc, loads, asel, bsel, write;
   input [1:0] vsel;
@@ -22,7 +22,7 @@ module datapath(clk, readnum, vsel, loada, loadb, shift, asel, bsel,
   //The 8 Register File which will determine whether or not to 
   //write or read to a register, will only return out data_out when 
   //reading a register 
-  regfile RegisterFile( .clk(clk), 
+  regfile REGFILE( .clk(clk), 
            		.write(write),
 			.writenum(writenum),
 			.readnum(readnum),
