@@ -2,17 +2,19 @@
 `define CMP 2'b01
 `define AND 2'b10
 `define NOT 2'b11
-/*Lab 5 Arithmetic Logic Unit (ALU)*/
-module alu(ALUop,Ain,Bin,out,status_in);
+/*Lab 6 Arithmetic Logic Unit (ALU)*/
+module alu(ALUop,Ain,Bin,out,status);
   input [1:0] ALUop; 
   input [15:0] Ain, Bin;
   output reg [15:0] out;
-  output [2:0] status_in;
+  output [2:0] status;
   wire ovf;
   wire [15:0] sout;
 
   Addsub #(16) a(Ain, Bin, 1'b1, sout, ovf);
-  assign status_in = {{out == 16'b0 ? 1'b1:1'b0},ovf,out[15]};
+  assign status[2] = ((out == 16'b0) ? 1'b1:1'b0);
+  assign status[1] = ovf;
+  assign status[0] = out[15];
   //ALU will reevaluate whenever any of the inputs change 
   always @(*) begin
     case (ALUop)

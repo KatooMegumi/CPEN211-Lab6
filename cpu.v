@@ -95,8 +95,8 @@ module instruct_decoder( instruction_out,
 
   setval retval(instruction_out,opcode,op,ALUop,imm5,imm8,shift,Rn,Rd,Rm);
   //signed extended imm5 and imm8
-  assign sximm5 = imm5 ? {11'b1,imm5}:{11'b0,imm5}; 
-  assign sximm8 = imm8 ? {8'b1,imm8}:{11'b0,imm8};
+  assign sximm5 = imm5[4] ? {11'b11111111111,imm5}:{11'b00000000000,imm5}; 
+  assign sximm8 = imm8[7] ? {8'b11111111,imm8}:{8'b00000000,imm8};
   always @(*) 
     case(nsel)
       3'b001: {readnum,writenum} = {Rn,Rn}; //set the register to Rn if nsel = 0

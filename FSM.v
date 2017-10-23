@@ -1,7 +1,8 @@
 module FSM(clk, reset, s, w, opcode, op, nsel,loada,loadb,loadc,vsel,write,loads,asel,bsel);
-  input clk, reset, s, w;
+  input clk, reset, s;
   input [2:0] opcode;
   input [1:0] op;
+  output w;
   output reg [2:0] nsel;
   output reg loada,loadb,loadc,loads,write,asel,bsel;
   output reg [1:0] vsel;
@@ -26,7 +27,7 @@ module FSM(clk, reset, s, w, opcode, op, nsel,loada,loadb,loadc,vsel,write,loads
 	{8'bx10xxxxx,`S0}: {load_s,nsel,next_state,loada,loadb,loadc,vsel,write,loads,asel,bsel}
 				= {1'b0,3'b000,`S0,1'b0,1'b0,1'b0,2'b00,1'b0,1'b0,1'b0,1'b0}; //keep waiting until s is set to 1 (reset state)
 	{8'bx1111010,`S0}: {load_s, nsel, next_state,loada,loadb,loadc,vsel,write,loads,asel,bsel} 
-				= {1'b1,3'b001,`S1,1'b0,1'b0,1'b0,2'b10,1'b1,1'b0,1'b0,1'b0}; //s is set to 1, opcode = 101, op = 10, then we write
+				= {1'b1,3'b001,`S1,1'b0,1'b0,1'b0,2'b10,1'b1,1'b0,1'b0,1'b0}; //s is set to 1, opcode = 110, op = 10, then we write
 	{8'b00x11010,`S1}: {load_s, nsel, next_state,loada,loadb,loadc,vsel,write,loads,asel,bsel} 
 				= {1'b0,3'b000,`S0,1'b0,1'b0,1'b0,2'b00,1'b0,1'b0,1'b0,1'b0}; //now we are done writing so we go back to waiting in reset state 
         {8'b01111000,`S0}: {load_s, nsel, next_state,loada,loadb,loadc,vsel,write,loads,asel,bsel} 
