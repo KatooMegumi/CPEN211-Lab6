@@ -12,9 +12,9 @@ module alu(ALUop,Ain,Bin,out,status);
   wire [15:0] sout;
 
   Addsub #(16) a(Ain, Bin, 1'b1, sout, ovf);
-  assign status[2] = ((out == 16'b0) ? 1'b1:1'b0);
-  assign status[1] = ovf;
-  assign status[0] = out[15];
+  assign status[2] = ((out == 16'b0) ? 1'b1:1'b0); //if it is zero
+  assign status[1] = ovf; //overflow
+  assign status[0] = out[15]; //negative
   //ALU will reevaluate whenever any of the inputs change 
   always @(*) begin
     case (ALUop)

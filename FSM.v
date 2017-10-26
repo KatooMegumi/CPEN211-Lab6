@@ -51,9 +51,9 @@ module FSM(clk, reset, s, w, opcode, op, nsel,loada,loadb,loadc,vsel,write,loads
 	{8'b01110101,`S0}: {load_s,nsel,next_state,loada,loadb,loadc,vsel,write,loads,asel,bsel}
 				= {1'b1,3'b001,`S1,1'b1,1'b0,1'b0,2'b10,1'b0,1'b0,1'b0,1'b0}; //This is for CMP, put Rn into RegA
 	{8'b00x10101,`S1}: {load_s,nsel,next_state,loada,loadb,loadc,vsel,write,loads,asel,bsel}
-				= {1'b1,3'b100,`S2,1'b0,1'b0,1'b0,2'b10,1'b0,1'b0,1'b0,1'b0}; //Place Rm into RegB
+				= {1'b1,3'b100,`S2,1'b0,1'b1,1'b0,2'b10,1'b0,1'b0,1'b0,1'b0}; //Place Rm into RegB
 	{8'b00x10101,`S2}: {load_s,nsel,next_state,loada,loadb,loadc,vsel,write,loads,asel,bsel}
-				= {1'b1,3'b000,`S3,1'b0,1'b0,1'b1,2'b00,1'b0,1'b1,1'b0,1'b0}; //Now do the subtraction
+				= {1'b1,3'b000,`S3,1'b0,1'b0,1'b0,2'b00,1'b0,1'b1,1'b0,1'b0}; //Now do the subtraction
    	{8'b00x10101,`S3}: {load_s,nsel,next_state,loada,loadb,loadc,vsel,write,loads,asel,bsel}
 				= {1'b0,3'b000,`S0,1'b0,1'b0,1'b0,2'b00,1'b0,1'b0,1'b0,1'b0}; //Now reset_state
 	{8'b01110110,`S0}: {load_s,nsel,next_state,loada,loadb,loadc,vsel,write,loads,asel,bsel}

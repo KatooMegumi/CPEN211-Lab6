@@ -67,9 +67,9 @@ module cpu(clk,reset,s,load,in,out,N,V,Z,w);
 			.PC(PC)
   );	
   //Now assign N,V,Z the values from status we get from datapath 
-  assign N = status[2];
+  assign N = status[0];
   assign V = status[1]; 
-  assign Z = status[0];  
+  assign Z = status[2];  
 endmodule
 
 module instruct_decoder( instruction_out, 

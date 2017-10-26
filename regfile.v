@@ -42,13 +42,13 @@ endmodule
 
 //Single Register with load enable and positive edge of clock 
 module vDFFE(clk,en,in,out);
-  parameter n = 1;
+  parameter n = 3;
   input clk, en;
   input [n-1:0] in;
   output reg [n-1:0] out;
   wire [n-1:0] nextout;
 
-  assign nextout = en?in:out;
+  assign nextout = en ? in:out;
   always @(posedge clk)
     out = nextout;
   endmodule 
